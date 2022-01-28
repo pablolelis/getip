@@ -24,7 +24,7 @@ RUN mkdir -p /root/.ssh/ && \
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 # Clone a repository (my website in this case)
-RUN git clone git@github.com:pablolelis/getip.git 
+RUN git clone https://github.com/pablolelis/getip.git
 
 
 # Choose the base image for our final imageFROM alpine
