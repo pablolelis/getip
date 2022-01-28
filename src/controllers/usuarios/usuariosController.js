@@ -7,13 +7,15 @@ exports.get = (req, res, next) => {
     req.connection.remoteAddress || // Recupera o endereço remoto da chamada
     req.socket.remoteAddress || // Recupera o endereço através do socket TCP
     req.connection.socket.remoteAddress // Recupera o endereço através do socket da conexão
-    return res.json(remoteIp);
-
-    /*const rows = conn.query('SELECT * FROM tb_ips;', function (err, result, fields) {
-        if (err) throw err;
-        return res.json(result);
-      });
-      */
+    
+    const sql = 'INSERT INTO tb_ips (ip) VALUES(?) ;';
+    values = remoteIp.toString(); 
+    console.log(values);
+    const rows = conn.query(sql,values,function (err, result, fields) {
+        if (err) throw console.log(err);
+            res.status(201).send('ok');
+    });
+    
 };
 
 exports.post = (req, res, next) => {
