@@ -1,0 +1,28 @@
+{
+  "name": "getip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pablolelis/get-ip.git"
+  },
+  "author": "Pablo Lellis",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv-safe": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.2",
+    "express-ejs-layouts": "^2.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
