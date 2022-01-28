@@ -1,9 +1,4 @@
 
-##############################################################################################
-##############################################################################################
-############## RUN git clone  git@github.com:pablolelis/hamurabi-node-rest.git ###############
-##############################################################################################
-##############################################################################################
 
 # Choose and name our temporary image
 FROM alpine as intermediate
@@ -29,7 +24,7 @@ RUN mkdir -p /root/.ssh/ && \
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 # Clone a repository (my website in this case)
-RUN git clone git@github.com:pablolelis/hamurabi-node-rest.git 
+RUN git clone git@github.com:pablolelis/getip.git 
 
 
 # Choose the base image for our final imageFROM alpine
