@@ -16,7 +16,7 @@ conn.connect(erro => {
 const app = require('../src/app');
 
 // ENV
-const port = normalizaPort(process.env.PORT || '8080');
+const port = normalizaPort(process.env.PORT || '80');
 
 
 // Helper function to validade port number
